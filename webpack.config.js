@@ -51,7 +51,7 @@ var config = {
         *  而publicPath和filename特性的设置要保留
         */
         // path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.galaace.com/bs-fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -175,7 +175,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-        new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于BS')),
     ],
     /* 
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
@@ -185,7 +185,7 @@ var config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://test.happymmall.com',
+                target: 'http://www.galaace.com',
                 changeOrigin : true
             }
         }
